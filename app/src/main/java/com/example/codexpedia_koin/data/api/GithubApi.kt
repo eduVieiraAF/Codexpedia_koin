@@ -1,5 +1,6 @@
 package com.example.codexpedia_koin.data.api
 
+import com.example.codexpedia_koin.data.model.GithubAccount
 import kotlinx.coroutines.Deferred
 import retrofit2.Response
 import retrofit2.http.GET

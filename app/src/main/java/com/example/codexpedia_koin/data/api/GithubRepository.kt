@@ -1,5 +1,6 @@
 package com.example.codexpedia_koin.data.api
 
+import com.example.codexpedia_koin.data.model.GithubAccount
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async

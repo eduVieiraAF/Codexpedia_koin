@@ -1,4 +1,4 @@
-package com.example.codexpedia_koin.data.api
+package com.example.codexpedia_koin.data.model
 
 import com.google.gson.annotations.SerializedName
 
