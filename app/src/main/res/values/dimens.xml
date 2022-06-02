@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="padding" type="dimen">8dp</item>
+    <item name="margin_zero" type="dimen">0dp</item>
+    <item name="margin_small" type="dimen">16dp</item>
+    <item name="margin_medium" type="dimen">32dp</item>
+    <item name="margin_large" type="dimen">48dp</item>
+    <item name="text_size" type="dimen">25sp</item>
+</resources>
