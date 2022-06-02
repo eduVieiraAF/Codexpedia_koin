@@ -34,6 +34,9 @@ android {
 }
 
 dependencies {
+
+    def lifecycle_version = "2.5.0-rc01"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21"
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -45,10 +48,16 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Lifecycle
-    implementation "androidx.lifecycle:lifecycle-livedata:2.4.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel:2.4.1"
-    implementation "androidx.lifecycle:lifecycle-extensions:2.4.0"
-    kapt "androidx.lifecycle:lifecycle-compiler:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
 
     //Okhttp
     implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.3"
@@ -70,9 +79,6 @@ dependencies {
     //Koin
     testImplementation "io.insert-koin:koin-test:3.2.0"
     implementation "io.insert-koin:koin-core:3.2.0"
-    implementation "org.koin:koin-android:3.2.0"
-    implementation "org.koin:koin-androidx-scope:3.2.0"
-    implementation "org.koin:koin-androidx-viewmodel:3.2.0"
     implementation "io.insert-koin:koin-android:3.2.0"
     implementation "io.insert-koin:koin-android-compat:3.2.0"
     implementation "io.insert-koin:koin-androidx-workmanager:3.2.0"
